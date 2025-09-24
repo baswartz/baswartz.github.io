@@ -4,6 +4,7 @@
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -3907,3 +3908,27 @@ input, select, textarea {
 			}
 
 		}
+
+/* Default: multiple projects stay in card/grid layout */
+#projects .features > section {
+  /* keep HTML5UP defaults */
+}
+
+/* Special case: if there's only ONE project, make it full width */
+#projects .features > section:only-child {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Make text and image split space nicely */
+#projects .features > section:only-child > div {
+  flex: 1;
+}
+
+/* Image styling */
+#projects .features img {
+  max-width: 100%;
+  border-radius: 8px;
+}
