@@ -6,6 +6,76 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Neon Gravity Dash Styles -->
+		<style>
+			/* Gravity Dash card glow */
+			.gravity-dash-card {
+				background: radial-gradient(circle at top left, #1a1a1a, #000);
+				border: 2px solid #00ffff80;
+				border-radius: 12px;
+				padding: 1.5rem;
+				box-shadow: 0 0 15px #00ffff33;
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.gravity-dash-card:hover {
+				transform: translateY(-6px) scale(1.02);
+				box-shadow: 0 0 25px #00ffffaa, 0 0 50px #ff00ffaa;
+				border-color: #ff00ffcc;
+			}
+
+			.gravity-dash-card h3 {
+				color: #00ffff;
+				text-shadow: 0 0 6px #00ffff, 0 0 12px #ff00ff;
+			}
+
+			.gravity-dash-card p {
+				color: #f0f0f0;
+			}
+
+			.gravity-dash-card .button {
+				background-color: #ff00ff;
+				color: white !important;
+				border: none;
+				box-shadow: 0 0 10px #ff00ff88;
+				transition: all 0.25s ease-in-out;
+			}
+
+			.gravity-dash-card .button:hover {
+				background-color: #00ffff;
+				color: #000 !important;
+				box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffffaa;
+				transform: scale(1.05);
+			}
+
+			.gravity-dash-card img {
+				margin-top: 1rem;
+				border-radius: 10px;
+				transition: all 0.3s ease-in-out;
+				box-shadow: 0 0 10px #00ffff55;
+			}
+
+			.gravity-dash-card:hover img {
+				filter: brightness(1.2) saturate(1.3);
+				box-shadow: 0 0 20px #00ffffaa, 0 0 40px #ff00ffaa;
+			}
+
+			@keyframes neonPulse {
+				0%, 100% {
+					box-shadow: 0 0 15px #00ffff55, 0 0 30px #ff00ff33;
+				}
+				50% {
+					box-shadow: 0 0 25px #00ffffaa, 0 0 50px #ff00ff66;
+				}
+			}
+
+			.gravity-dash-card {
+				animation: neonPulse 3s infinite ease-in-out;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -60,6 +130,26 @@
 			    <p>Some of the projects I’ve built — from game development to full-stack web tools and algorithmic optimization.</p>
 			
 			    <div class="features">
+
+			      <!-- Gravity Dash -->
+			      <section class="gravity-dash-card">
+			        <span class="icon solid major fa-gamepad"></span>
+			        <h3>Gravity Dash (Unity, C#)</h3>
+			        <p><em>Gravity Dash</em> flips the classic Geometry Dash formula on its head — literally. Instead of jumping, you reverse gravity mid-flight to dodge spikes, weave through hazards, and stay in rhythm with an intense, color-synced soundtrack. Every beat speeds you up, every obstacle tests your reflexes — and every flip feels electric ⚡.</p>
+			        <p><a href="https://baswartz.itch.io/gravity-dash" target="_blank" class="button">Play Gravity Dash</a></p>
+			        <img src="images/gravity-dash.png" alt="Gravity Dash Screenshot" style="max-width:100%; border-radius:8px;" />
+			      </section>
+
+			      <!-- NES Zelda -->
+			      <section>
+			        <span class="icon solid major fa-code"></span>
+			        <h3>NES Zelda (Unity, C#)</h3>
+			        <p>In a group of 3, recreated the original NES Zelda with a twist — a new feature where the player can pick up and ride a broom with all its new mechanics.</p>
+			        <p>I implemented weapon mechanics (sword, bow, bombs), designed edge colliders to restrict projectile range, built the health system, and developed enemies like keese and wallmasters.</p>
+			        <p><a href="https://baswartz.itch.io/zelda" target="_blank" class="button">Play Zelda</a></p>
+			        <img src="images/zelda-pic.jpg" alt="Zelda Screenshot" style="max-width:100%; border-radius:8px;" />
+			      </section>
+
 			      <!-- What Matters Most -->
 			      <section>
 			        <span class="icon solid major fa-heart"></span>
@@ -78,16 +168,6 @@
 			        <p>Focused on reusable component architecture and responsive layouts for consistent cross-device experience.</p>
 					<p><a href="https://app.kinnect.club" target="_blank" class="button">Website available soon</a></p>
 			        <img src="images/kinnect-web.jpg" alt="Kinnect Web Screenshot" style="max-width:100%; border-radius:8px;" />
-			      </section>
-			
-			      <!-- NES Zelda -->
-			      <section>
-			        <span class="icon solid major fa-code"></span>
-			        <h3>NES Zelda (Unity, C#)</h3>
-			        <p>In a group of 3, recreated the original NES Zelda with a twist — a new feature where the player can pick up and ride a broom with all its new mechanics.</p>
-			        <p>I implemented weapon mechanics (sword, bow, bombs), designed edge colliders to restrict projectile range, built the health system, and developed enemies like keese and wallmasters.</p>
-			        <p><a href="https://baswartz.itch.io/zelda" target="_blank" class="button">Play Zelda</a></p>
-			        <img src="images/zelda-pic.jpg" alt="Zelda Screenshot" style="max-width:100%; border-radius:8px;" />
 			      </section>
 			
 			      <!-- Search Engine -->
@@ -139,11 +219,3 @@
 
 	</body>
 </html>
-
-
-
-
-
-
-
-
